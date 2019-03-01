@@ -4,8 +4,8 @@
   "description": "A lit-html playground",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
     "start": "webpack-dev-server --mode development --config config/webpack.config-dev.js",
+    "build": "webpack -p --config config/webpack.config-prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
