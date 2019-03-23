@@ -1,7 +1,11 @@
 import { LitElement, html, customElement, property, css } from 'lit-element';
 
+interface ListItem {
+    name: string;
+}
+
 @customElement('my-app')
-export class MyApp extends LitElement  {
+export class MyApp extends LitElement {
 
     static styles = css`
         @import url('https://use.fontawesome.com/releases/v5.7.1/css/solid.css');
@@ -13,11 +17,10 @@ export class MyApp extends LitElement  {
         }
     `;
 
-    @property({ type : Boolean }) public checked = false;
-    @property({ type : Array }) public list = [
-        { name: 'one' },
-        { name: 'two' },
-    ];
+    @property({ type : Boolean })
+    public checked = false;
+    @property({ type : Array })
+    public list: ListItem[] = [];
     private counter = 0;
 
     render() {
